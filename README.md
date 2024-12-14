@@ -1,14 +1,14 @@
 <div align="center">
  
 # Waterfall-Core
-A small CLI only version of Waterfall Operating System
+A small CLI mode only version of Waterfall Operating System
 </div>
 
 <a href="https://discord.com/invite/KUm5JuC9XV">
   <img src="https://img.shields.io/badge/Discord-navy?style=for-the-badge&logo=discord&color=2bb572" alt="Discord">
 </a>
 
-### Waterfall is a high-performance operating system based on CosmosOS, developed using C#. Designed for speed and efficiency, Waterfall OS leverages its own custom drivers to ensure optimal performance and compatibility. 
+### Waterfall is a high-performance operating system based on [CosmosOS](https://github.com/CosmosOS/Cosmos), developed using C# by [Szymekk](https://www.youtube.com/szymekk). Designed for speed and performance, Waterfall comes with its own custom drivers to ensure optimal performance and compatibility.
 
 
 > [!note]
@@ -29,3 +29,11 @@ We welcome contributions to this project! Whether you want to improve performanc
 If you want to contribute, feel free to open an issue or a pull request. If you have any questions, you can join my [discord server! ](https://discord.com/invite/KUm5JuC9XV)
 > [!note]
 > New things added to Waterfall-Core will be added to the full Waterfall Operating System version.
+
+
+<p align="center">
+ <picture>
+    <source srcset="Images/screenshot_waterfall.png">
+    <img width=100%>
+  </picture>
+</p><br>
