@@ -29,3 +29,11 @@ We welcome contributions to this project! Whether you want to improve performanc
 If you want to contribute, feel free to open an issue or a pull request. If you have any questions, you can join my [discord server! ](https://discord.com/invite/KUm5JuC9XV)
 > [!note]
 > New things added to Waterfall-Core will be added to the full Waterfall Operating System version.
+
+
+<p align="center">
+ <picture>
+    <source srcset="Images/screenshot_waterfall.png">
+    <img width=100%>
+  </picture>
+</p><br>
