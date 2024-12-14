@@ -1,0 +1,6 @@
+Command usage: installer [OPTION]...
+   -d, --disk      <disk number>      select a disk
+   -p, --partition <partition number> select a partition
+   -i, --install                      Disabled.
+   -c, --copy                         copy Waterfall files to selected disk and partition
+       --help                         display this help
