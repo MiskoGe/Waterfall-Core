@@ -402,9 +402,3 @@ FodyWeavers.xsd
 *.sln.iml
 *.v2
 *.v2
-
-SRC/.vs/Waterfall/v17/.suo
-SRC/.vs/ProjectEvaluation/waterfall.metadata.v7.bin
-SRC/.vs/ProjectEvaluation/waterfall.projects.v7.bin
-SRC/.vs/WaterfallCore/DesignTimeBuild/.dtbcache.v2
-SRC/.vs/WaterfallCore/v17/.futdcache.v2
