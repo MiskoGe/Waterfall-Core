@@ -5,10 +5,10 @@ using Waterfall.System.Security.FS;
 
 namespace Waterfall.System.Core.Waterbash.Commands
 {
-    public class md : WSHCommand
+    public class rd : WSHCommand
     {
-        public override string HelpNote { get; set; } = "Creates a new directory with the specified name";
-        public md()
+        public override string HelpNote { get; set; } = "Deletes specified directories.";
+        public rd()
         {
             MinimumParamsLength = 1;
             paramActions = new Dictionary<string, Action<Watershell>>
@@ -45,18 +45,21 @@ namespace Waterfall.System.Core.Waterbash.Commands
                 Path = myShell.GetPath() + Path;
             }
 
-            if (Path[Path.Length - 1] != '\\')
-                Path += "\\";
+            if (Path[Path.Length - 1] == '\\')
+                Path = Path.Substring(0, Path.Length - 1);
 
             Path = Path.Replace('/', '\\');
-
             ExecuteDir(Path, myShell);
         }
         void ExecuteDir(string dir, Watershell myShell)
         {
-            if (FileManagment.CanCreate(dir, myShell.Process))
+            if (!FileManagment.DeleteDirectory(dir, myShell.Process))
             {
-                Directory.CreateDirectory(dir);
+                myShell.CWriteLine("No permissions.");
+            }
+            else
+            {
+                myShell.CWriteLine("Deleted directory: " + dir);
             }
         }
     }

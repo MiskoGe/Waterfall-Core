@@ -5,12 +5,12 @@ using Waterfall.System.Security.FS;
 
 namespace Waterfall.System.Core.Waterbash.Commands
 {
-    public class md : WSHCommand
+    public class copy : WSHCommand
     {
-        public override string HelpNote { get; set; } = "Creates a new directory with the specified name";
-        public md()
+        public override string HelpNote { get; set; } = "Copies specified files.";
+        public copy()
         {
-            MinimumParamsLength = 1;
+            MinimumParamsLength = 2;
             paramActions = new Dictionary<string, Action<Watershell>>
             {
 
@@ -19,6 +19,7 @@ namespace Waterfall.System.Core.Waterbash.Commands
         public override void Execute(string[] Params, Watershell myShell)
         {
             string Path = Params[0];
+            string NewPath = Params[1];
             if (Path.StartsWith("\\"))
             {
                 Path = myShell.GetPath() + Path;
@@ -45,18 +46,23 @@ namespace Waterfall.System.Core.Waterbash.Commands
                 Path = myShell.GetPath() + Path;
             }
 
-            if (Path[Path.Length - 1] != '\\')
-                Path += "\\";
+            if (Path[Path.Length - 1] == '\\')
+                Path = Path.Substring(0, Path.Length - 1);
 
             Path = Path.Replace('/', '\\');
-
-            ExecuteDir(Path, myShell);
+            NewPath = NewPath.Replace('/', '\\');
+            ExecuteDir(Path, NewPath, myShell);
         }
-        void ExecuteDir(string dir, Watershell myShell)
+        void ExecuteDir(string dir, string newdir, Watershell myShell)
         {
-            if (FileManagment.CanCreate(dir, myShell.Process))
+            if (!FileManagment.CanCreate(dir, myShell.Process))
             {
-                Directory.CreateDirectory(dir);
+                myShell.CWriteLine("No permissions.");
+            }
+            else
+            {
+                // File.Copy(dir, newdir);
+                myShell.CWriteLine("File successfully copied to " + newdir);
             }
         }
     }

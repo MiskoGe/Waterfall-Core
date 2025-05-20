@@ -10,6 +10,7 @@ namespace Waterfall.System.Core.Waterbash.Commands
         public override string HelpNote { get; set; } = "Creates a new empty file or updates the timestamp of an existing file";
         public touch()
         {
+            MinimumParamsLength = 1;
             paramActions = new Dictionary<string, Action<Watershell>>
             {
 
@@ -17,12 +18,6 @@ namespace Waterfall.System.Core.Waterbash.Commands
         }
         public override void Execute(string[] Params, Watershell myShell)
         {
-            if (Params.Length == 0)
-            {
-                ExecuteDir(myShell.GetPath(), myShell);
-                return;
-            }
-
             string Path = Params[0];
             if (Path.StartsWith("\\"))
             {

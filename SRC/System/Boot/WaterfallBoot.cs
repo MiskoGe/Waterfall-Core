@@ -28,7 +28,7 @@ namespace Waterfall.System.Boot
 			CLILogs.WriteInfo($"Booted Waterfall {BuildConfig.Version} ({BuildConfig.SubVersion})");
 			CLI.CLIBash.CWriteLine($"");
 			CLI.CLIBash.CWriteLine($"Waterfall Operating System is licensed under BSD 3-Clause License");
-			CLI.CLIBash.CWriteLine($"Copyright (c) 2024, Szymekk, SzymekkYT");
+			CLI.CLIBash.CWriteLine($"Copyright (c) 2024-2025, Szymekk, SzymekkYT (mod. by MiskoGe)");
 			CLI.CLIBash.CWriteLine($"All rights reserved.");
 			CLI.CLIBash.CWriteLine($"");
             CLI.CLIBash.CWriteLine($"Welcome to Waterfall Core!");

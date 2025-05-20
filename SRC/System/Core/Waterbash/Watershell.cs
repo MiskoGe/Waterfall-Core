@@ -82,9 +82,11 @@ namespace Waterfall.System.Core.Waterbash
 			commands.Add("partition", () => new partition());
 			commands.Add("poweroff", () => new poweroff());
 			commands.Add("ram", () => new ram());
-			commands.Add("reboot", () => new reboot());
+            commands.Add("rd", () => new rd());
+            commands.Add("reboot", () => new reboot());
 			commands.Add("touch", () => new touch());
 			commands.Add("uname", () => new uname());
+			commands.Add("zyntra", () => new zyntra());
         }
 
 		/// <summary>
